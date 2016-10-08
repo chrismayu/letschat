@@ -13,24 +13,27 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-gem 'administrate' 
 gem "font-awesome-rails" 
 gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 gem 'bootstrap-sass'
-
-
-gem 'simple_form'
 gem 'devise'
 gem 'high_voltage'
 gem 'pg'
-gem 'pundit'
+gem 'sendgrid'
+gem 'simple_form'
 gem 'thin'
 gem 'friendly_id'
 gem 'browsernizer'
 gem 'figaro'
 gem 'heroku'
-gem 'bh'
-gem 'twitter-bootstrap-rails'
+gem 'bh'  
+gem 'twitter-bootstrap-rails', ' 3.2.0'
+gem 'bootstrap-datepicker-rails'
+gem 'rollbar', '~> 2.8.3'
+gem 'apartment'
+gem "pundit"
+gem 'redcarpet'
+gem 'exception_handler', '~> 0.5.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-angular'
@@ -38,15 +41,15 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-sweetalert'
   gem 'rails-assets-font-awsome'
 end
-
+ 
 group :development do
   gem "letter_opener"
   gem 'better_errors'
-  gem 'foreman'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'hub', :require=>nil
+  gem 'quiet_assets'
   gem 'rails_layout'
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
