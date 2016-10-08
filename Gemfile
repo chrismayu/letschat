@@ -15,12 +15,21 @@ group :development do
 end
 gem 'administrate'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
+gem 'bootstrap-sass'
+gem 'simple_form'
 gem 'devise'
 gem 'high_voltage'
 gem 'pg'
 gem 'pundit'
 gem 'thin'
+gem 'friendly_id'
+gem 'browsernizer'
+gem 'figaro'
+gem 'heroku'
+gem 'twitter-bootstrap-rails', ' 3.2.0'
 group :development do
+  gem "letter_opener"
   gem 'better_errors'
   gem 'foreman'
   gem 'guard-bundler'
