@@ -13,10 +13,12 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-gem 'administrate'
-gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'administrate' 
+gem "font-awesome-rails" 
 gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 gem 'bootstrap-sass'
+
+
 gem 'simple_form'
 gem 'devise'
 gem 'high_voltage'
@@ -27,7 +29,16 @@ gem 'friendly_id'
 gem 'browsernizer'
 gem 'figaro'
 gem 'heroku'
-gem 'twitter-bootstrap-rails', ' 3.2.0'
+gem 'bh'
+gem 'twitter-bootstrap-rails'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-leaflet'
+  gem 'rails-assets-bootstrap-sweetalert'
+  gem 'rails-assets-font-awsome'
+end
+
 group :development do
   gem "letter_opener"
   gem 'better_errors'
