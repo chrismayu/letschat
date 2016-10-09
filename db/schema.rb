@@ -11,26 +11,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008030551) do
+ActiveRecord::Schema.define(version: 20161009164928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "details", force: :cascade do |t|
+    t.integer  "user_id"
+    t.boolean  "email_able",     default: false
+    t.string   "details_email"
+    t.string   "cellphone"
+    t.string   "phone2"
+    t.integer  "country_id"
+    t.integer  "state_id"
+    t.string   "city"
+    t.string   "address"
+    t.string   "province"
+    t.string   "country"
+    t.string   "social_link_1"
+    t.string   "social_link_2"
+    t.string   "social_link_3"
+    t.string   "social_link_4"
+    t.string   "social_link_5"
+    t.string   "social_link_6"
+    t.string   "social_link_7"
+    t.string   "social_link_8"
+    t.string   "social_link_9"
+    t.string   "social_link_10"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "name"
     t.integer  "role"
+    t.boolean  "yes_receive_email",      default: false
+    t.string   "display_name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "slug"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

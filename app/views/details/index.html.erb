@@ -1,0 +1,76 @@
+<%- model_class = Detail -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:email_able) %></th>
+      <th><%= model_class.human_attribute_name(:details_email) %></th>
+      <th><%= model_class.human_attribute_name(:cellphone) %></th>
+      <th><%= model_class.human_attribute_name(:phone2) %></th>
+      <th><%= model_class.human_attribute_name(:country_id) %></th>
+      <th><%= model_class.human_attribute_name(:state_id) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
+      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:province) %></th>
+      <th><%= model_class.human_attribute_name(:country) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_1) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_2) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_3) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_4) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_5) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_6) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_7) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_8) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_9) %></th>
+      <th><%= model_class.human_attribute_name(:social_link_10) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= link_to detail.id, detail_path(detail) %></td>
+        <td><%= detail.user_id %></td>
+        <td><%= detail.email_able %></td>
+        <td><%= detail.details_email %></td>
+        <td><%= detail.cellphone %></td>
+        <td><%= detail.phone2 %></td>
+        <td><%= detail.country_id %></td>
+        <td><%= detail.state_id %></td>
+        <td><%= detail.city %></td>
+        <td><%= detail.address %></td>
+        <td><%= detail.province %></td>
+        <td><%= detail.country %></td>
+        <td><%= detail.social_link_1 %></td>
+        <td><%= detail.social_link_2 %></td>
+        <td><%= detail.social_link_3 %></td>
+        <td><%= detail.social_link_4 %></td>
+        <td><%= detail.social_link_5 %></td>
+        <td><%= detail.social_link_6 %></td>
+        <td><%= detail.social_link_7 %></td>
+        <td><%= detail.social_link_8 %></td>
+        <td><%= detail.social_link_9 %></td>
+        <td><%= detail.social_link_10 %></td>
+        <td><%=l detail.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_detail_path(detail), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      detail_path(detail),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_detail_path,
+            :class => 'btn btn-primary' %>

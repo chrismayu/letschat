@@ -1,0 +1,59 @@
+<%- model_class = Detail -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @detail.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email_able) %>:</strong></dt>
+  <dd><%= @detail.email_able %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:details_email) %>:</strong></dt>
+  <dd><%= @detail.details_email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cellphone) %>:</strong></dt>
+  <dd><%= @detail.cellphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone2) %>:</strong></dt>
+  <dd><%= @detail.phone2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:country_id) %>:</strong></dt>
+  <dd><%= @detail.country_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:state_id) %>:</strong></dt>
+  <dd><%= @detail.state_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+  <dd><%= @detail.city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @detail.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:province) %>:</strong></dt>
+  <dd><%= @detail.province %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
+  <dd><%= @detail.country %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_1) %>:</strong></dt>
+  <dd><%= @detail.social_link_1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_2) %>:</strong></dt>
+  <dd><%= @detail.social_link_2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_3) %>:</strong></dt>
+  <dd><%= @detail.social_link_3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_4) %>:</strong></dt>
+  <dd><%= @detail.social_link_4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_5) %>:</strong></dt>
+  <dd><%= @detail.social_link_5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_6) %>:</strong></dt>
+  <dd><%= @detail.social_link_6 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_7) %>:</strong></dt>
+  <dd><%= @detail.social_link_7 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_8) %>:</strong></dt>
+  <dd><%= @detail.social_link_8 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_9) %>:</strong></dt>
+  <dd><%= @detail.social_link_9 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_10) %>:</strong></dt>
+  <dd><%= @detail.social_link_10 %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              details_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_detail_path(@detail), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              detail_path(@detail),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

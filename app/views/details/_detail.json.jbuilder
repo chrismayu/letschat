@@ -1,0 +1,2 @@
+json.extract! detail, :id, :user_id, :email_able, :details_email, :cellphone, :phone2, :country_id, :state_id, :city, :address, :province, :country, :social_link_1, :social_link_2, :social_link_3, :social_link_4, :social_link_5, :social_link_6, :social_link_7, :social_link_8, :social_link_9, :social_link_10, :created_at, :updated_at
+json.url detail_url(detail, format: :json)
