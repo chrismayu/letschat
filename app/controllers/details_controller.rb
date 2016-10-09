@@ -1,5 +1,5 @@
 class DetailsController < ApplicationController
-  before_action :set_detail, only: [:show, :edit, :update, :destroy]
+  before_action :set_detail, only: [:outside_show, :show, :edit, :update, :destroy]
 
   # GET /details
   # GET /details.json
@@ -7,8 +7,9 @@ class DetailsController < ApplicationController
     @details = Detail.all
   end
   
-  def outside_show
-   @user = User.friendly.find(params[:id])
+  def outside_show 
+    
+     @names = User.names( @detail.user_id).first
    end
   # GET /details/1
   # GET /details/1.json

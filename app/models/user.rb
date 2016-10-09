@@ -12,9 +12,9 @@ class User < ActiveRecord::Base
   before_validation :downcase_name
 
   has_one :detail
-
-
-  # Try building a slug based on the following fields in
+ 
+  scope :names, -> (id) { where(:id => id).select( :first_name, :last_name) }
+    # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates
     [
