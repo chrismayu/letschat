@@ -1,7 +1,13 @@
+
+ 
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@charset "utf-8";
+
+
+ 
 // make all images responsive by default
 img {
   @extend .img-responsive;
