@@ -2,8 +2,7 @@ class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
   enum role: [:user, :vip, :admin]
-  after_initialize :set_default_role, :if => :new_record?
-
+  after_save :set_detail
 
   validates_presence_of :name, :first_name, :last_name
   validates_format_of :name, :with => /\A[A-Za-z0-9-]+\z/, :message => 'The name can only contain alphanumeric characters and dashes.', :allow_blank => true
@@ -12,6 +11,7 @@ class User < ActiveRecord::Base
 
   before_validation :downcase_name
 
+  has_one :detail
 
 
   # Try building a slug based on the following fields in
@@ -37,8 +37,16 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
      :recoverable, :rememberable, :trackable, :validatable
    
+
+     private
+
+     def set_detail
+       
+       self.build_detail(:name => self.name) unless self.detail.present?
+       self.detail.save
+     end   
    
-   
+  
      protected
 
    def downcase_name

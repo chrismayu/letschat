@@ -6,10 +6,14 @@ class DetailsController < ApplicationController
   def index
     @details = Detail.all
   end
-
+  
+  def outside_show
+   @user = User.friendly.find(params[:id])
+   end
   # GET /details/1
   # GET /details/1.json
   def show
+     
   end
 
   # GET /details/new
@@ -64,11 +68,11 @@ class DetailsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_detail
-      @detail = Detail.find(params[:id])
+      @detail = Detail.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def detail_params
-      params.require(:detail).permit(:user_id, :email_able, :details_email, :cellphone, :phone2, :country_id, :state_id, :city, :address, :province, :country, :social_link_1, :social_link_2, :social_link_3, :social_link_4, :social_link_5, :social_link_6, :social_link_7, :social_link_8, :social_link_9, :social_link_10)
+      params.require(:detail).permit(:user_id, :name, :slug, :email_able, :details_email, :cellphone, :phone2, :country_id, :state_id, :city, :address, :province, :country, :social_link_1, :social_link_2, :social_link_3, :social_link_4, :social_link_5, :social_link_6, :social_link_7, :social_link_8, :social_link_9, :social_link_10)
     end
 end
