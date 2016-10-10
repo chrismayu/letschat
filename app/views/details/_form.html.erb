@@ -1,46 +1,21 @@
 <%= simple_form_for @detail, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :user_id %>
-  <%= error_span(@detail[:user_id]) %>
-  <%= f.input :email_able %>
-  <%= error_span(@detail[:email_able]) %>
-  <%= f.input :details_email %>
+ 
+ 
+  <%= f.input :details_email, :label=>"Your Email:", :placeholder=>"Your Email", :input_html => { :class => "enroll_input col-xs-4"}  %>
+  
   <%= error_span(@detail[:details_email]) %>
-  <%= f.input :cellphone %>
+  <%= f.input :cellphone , :input_html => { :class => "enroll_input col-xs-4"} %>
   <%= error_span(@detail[:cellphone]) %>
-  <%= f.input :phone2 %>
-  <%= error_span(@detail[:phone2]) %>
-  <%= f.input :country_id %>
-  <%= error_span(@detail[:country_id]) %>
-  <%= f.input :state_id %>
-  <%= error_span(@detail[:state_id]) %>
-  <%= f.input :city %>
-  <%= error_span(@detail[:city]) %>
-  <%= f.input :address %>
-  <%= error_span(@detail[:address]) %>
-  <%= f.input :province %>
-  <%= error_span(@detail[:province]) %>
-  <%= f.input :country %>
-  <%= error_span(@detail[:country]) %>
-  <%= f.input :social_link_1 %>
+ 
+
+   
+  <%= f.input :social_link_1 , :input_html => { :class => "enroll_input col-xs-4"} %>
   <%= error_span(@detail[:social_link_1]) %>
-  <%= f.input :social_link_2 %>
+  <%= f.input :social_link_2, :input_html => { :class => "enroll_input col-xs-4"}  %>
   <%= error_span(@detail[:social_link_2]) %>
-  <%= f.input :social_link_3 %>
+  <%= f.input :social_link_3, :input_html => { :class => "enroll_input col-xs-4"}  %>
   <%= error_span(@detail[:social_link_3]) %>
-  <%= f.input :social_link_4 %>
-  <%= error_span(@detail[:social_link_4]) %>
-  <%= f.input :social_link_5 %>
-  <%= error_span(@detail[:social_link_5]) %>
-  <%= f.input :social_link_6 %>
-  <%= error_span(@detail[:social_link_6]) %>
-  <%= f.input :social_link_7 %>
-  <%= error_span(@detail[:social_link_7]) %>
-  <%= f.input :social_link_8 %>
-  <%= error_span(@detail[:social_link_8]) %>
-  <%= f.input :social_link_9 %>
-  <%= error_span(@detail[:social_link_9]) %>
-  <%= f.input :social_link_10 %>
-  <%= error_span(@detail[:social_link_10]) %>
+ 
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

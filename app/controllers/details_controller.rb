@@ -1,5 +1,5 @@
 class DetailsController < ApplicationController
-  before_action :set_detail, only: [:outside_show, :show, :edit, :update, :destroy]
+  before_action :set_detail, only: [:outside_show, :edit, :update, :destroy]
 
   # GET /details
   # GET /details.json
@@ -8,13 +8,13 @@ class DetailsController < ApplicationController
   end
   
   def outside_show 
-    
+    current_user.detail
      @names = User.names( @detail.user_id).first
    end
   # GET /details/1
   # GET /details/1.json
   def show
-     
+     @detail = current_user.detail
   end
 
   # GET /details/new
