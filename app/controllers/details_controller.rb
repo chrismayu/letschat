@@ -1,5 +1,5 @@
 class DetailsController < ApplicationController
-  before_action :set_detail, only: [:outside_show, :edit, :update, :destroy]
+  before_action :set_detail, only: [ :edit, :update, :destroy]
 
   # GET /details
   # GET /details.json
@@ -7,9 +7,17 @@ class DetailsController < ApplicationController
     @details = Detail.all
   end
   
-  def outside_show 
-    current_user.detail
-     @names = User.names( @detail.user_id).first
+  def outside_show  
+    
+    if Detail.where(:name => params[:id]).present?
+      @detail = Detail.friendly.find(params[:id])
+       @names = User.names(@detail.user_id).first
+    else
+        redirect_to root_path, notice: "Sorry - Could not find anyone with the name - #{params[:id]}"  
+    end
+    
+    
+   
    end
   # GET /details/1
   # GET /details/1.json
