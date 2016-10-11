@@ -58,7 +58,7 @@ class DetailsController < ApplicationController
 
   # DELETE /details/1
   # DELETE /details/1.json
-  def destroy
+  def destroy_not_used
     @detail.destroy
     respond_to do |format|
       format.html { redirect_to details_url, notice: 'Detail was successfully destroyed.' }

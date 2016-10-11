@@ -23,13 +23,13 @@ ADMIN_NAME: Chris Mailloux
 ADMIN_EMAIL: chrismayu@gmail.com
 ADMIN_PASSWORD: tobytoby
 SECRET_KEY_BASE: 739937333cb6c535e798347893434ius23r23349g39gh32423423423423423894g83jiihfsdhfsdhfisdhf08weh08efh26b724634346346346346338b4035982ce1905d8492e49d246c570a8f247954049d223d209c2332b8819f55f17853295565988fdca80cd8c71cfd7049bff8c
-DOMAIN_NAME: heisreal.net 
+DOMAIN_NAME: letschat.cc 
 ROLLBAR_ACCESS_TOKEN: 1a0f03a032724d56b7f8905e1ae51b14
 return_email_address: ruby.rails.chris@gmail.com
 SITE_EMAIL: ruby.rails.chris@gmail.com
 ADAM_EMAIL: info@cmiforms.com 
 ROLES: '[admin, user, VIP]'
-URL: 'http://www.hannahs-headbands.com/'
+URL: 'http://www.letschat.cc/'
  
  
 
