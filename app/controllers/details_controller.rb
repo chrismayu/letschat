@@ -8,12 +8,13 @@ class DetailsController < ApplicationController
   end
   
   def outside_show  
+    params_id = params[:id].downcase
     
-    if Detail.where(:name => params[:id]).present?
-      @detail = Detail.friendly.find(params[:id])
+    if Detail.where(:name => params_id).present?
+      @detail = Detail.friendly.find(params_id )
        @names = User.names(@detail.user_id).first
     else
-        redirect_to root_path, notice: "Sorry - Could not find anyone with the name - #{params[:id]}"  
+        redirect_to root_path, alert: "Sorry - Could not find anyone with the name - #{params_id}"  
     end
     
     
