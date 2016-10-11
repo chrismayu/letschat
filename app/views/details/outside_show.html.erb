@@ -4,14 +4,8 @@
 </div>
 
 <dl class="dl-horizontal">
-	<% if @detail.user_id? %>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @detail.user_id %></dd>
-  <%end%>
-  <% if @detail.email_able? %>
-  <dt><strong><%= model_class.human_attribute_name(:email_able) %>:</strong></dt>
-  <dd><%= @detail.email_able %></dd>
-  <%end%>
+ 
+ 
   <% if @detail.details_email? %>
   <dt><strong><%= model_class.human_attribute_name(:details_email) %>:</strong></dt>
   <dd><%= @detail.details_email %></dd>
@@ -20,34 +14,7 @@
   <dt><strong><%= model_class.human_attribute_name(:cellphone) %>:</strong></dt>
   <dd><%= @detail.cellphone %></dd>
   <%end%>
-  <% if @detail.phone2? %>
-  <dt><strong><%= model_class.human_attribute_name(:phone2) %>:</strong></dt>
-  <dd><%= @detail.phone2 %></dd>
-  <%end%>
-  <% if @detail.country_id? %>
-  <dt><strong><%= model_class.human_attribute_name(:country_id) %>:</strong></dt>
-  <dd><%= @detail.country_id %></dd>
-  <%end%>
-  <% if @detail.state_id? %>
-  <dt><strong><%= model_class.human_attribute_name(:state_id) %>:</strong></dt>
-  <dd><%= @detail.state_id %></dd>
-  <%end%>
-  <% if @detail.city? %>
-  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
-  <dd><%= @detail.city %></dd>
-  <%end%>
-  <% if @detail.address? %>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-  <dd><%= @detail.address %></dd>
-  <%end%>
-  <% if @detail.province? %>
-  <dt><strong><%= model_class.human_attribute_name(:province) %>:</strong></dt>
-  <dd><%= @detail.province %></dd>
-  <%end%>
-  <% if @detail.country? %>
-  <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
-  <dd><%= @detail.country %></dd>
-  <%end%>
+ 
   <% if @detail.social_link_1? %>
   <dt><strong><%= model_class.human_attribute_name(:social_link_1) %>:</strong></dt>
   <dd><%= @detail.social_link_1 %></dd>
