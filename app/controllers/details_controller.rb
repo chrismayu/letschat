@@ -5,6 +5,8 @@ class DetailsController < ApplicationController
   # GET /details.json
   def index
     @details = Detail.all
+
+    authorize @details 
   end
   
   def outside_show  
@@ -12,6 +14,7 @@ class DetailsController < ApplicationController
     
     if Detail.where(:name => params_id).present?
       @detail = Detail.friendly.find(params_id )
+       authorize @detail
        @names = User.names(@detail.user_id).first
     else
         redirect_to root_path, alert: "Sorry - Could not find anyone with the name - #{params_id}"  
@@ -24,22 +27,25 @@ class DetailsController < ApplicationController
   # GET /details/1.json
   def show
      @detail = current_user.detail
+         authorize @detail
   end
 
   # GET /details/new
   def new
     @detail = Detail.new
+    authorize @detail
   end
 
   # GET /details/1/edit
   def edit
+    authorize @detail
   end
 
   # POST /details
   # POST /details.json
   def create
     @detail = Detail.new(detail_params)
-
+    authorize @detail
     respond_to do |format|
       if @detail.save
         format.html { redirect_to @detail, notice: 'Detail was successfully created.' }
@@ -54,6 +60,7 @@ class DetailsController < ApplicationController
   # PATCH/PUT /details/1
   # PATCH/PUT /details/1.json
   def update
+    authorize @detail
     respond_to do |format|
       if @detail.update(detail_params)
         format.html { redirect_to @detail, notice: 'Detail was successfully updated.' }
