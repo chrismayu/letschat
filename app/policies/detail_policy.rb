@@ -7,6 +7,10 @@ class DetailPolicy < ApplicationPolicy
   def create?
     true
   end
+  
+  def outside_show?
+    true
+  end
    
    
   alias_method :edit?, :admin_or_current_user? 
