@@ -10,9 +10,7 @@
  <br>
  <h4> Send people here:  <%= link_to "#{ENV['DOMAIN_NAME']}/#{current_user.name}", root_url+ "#{current_user.name}" %></h4>
  <br>
- </div> 
- </div>
- </div>
+
  
 
 <dl class="dl-horizontal">
@@ -101,4 +99,6 @@
  
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_detail_path(@detail), :class => 'btn btn-default' %>
- 
+ </div> 
+ </div>
+ </div>

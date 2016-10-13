@@ -63,7 +63,7 @@ class DetailsController < ApplicationController
     authorize @detail
     respond_to do |format|
       if @detail.update(detail_params)
-        format.html { redirect_to @detail, notice: 'Detail was successfully updated.' }
+        format.html { redirect_to @detail, notice: 'Your Information has been successfully updated.' }
         format.json { render :show, status: :ok, location: @detail }
       else
         format.html { render :edit }
