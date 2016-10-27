@@ -1,5 +1,6 @@
 class DetailsController < ApplicationController
   before_action :set_detail, only: [ :edit, :update, :destroy]
+    require 'uri'
 
   # GET /details
   # GET /details.json
@@ -14,7 +15,7 @@ class DetailsController < ApplicationController
     
     if Detail.where(:name => params_id).present?
       @detail = Detail.friendly.find(params_id )
-       authorize @detail
+  
        @names = User.names(@detail.user_id).first
     else
         redirect_to root_path, alert: "Sorry - Could not find anyone with the name - #{params_id}"  

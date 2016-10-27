@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   has_one :detail
  
-  scope :names, -> (id) { where(:id => id).select( :first_name, :last_name) }
+  scope :names, -> (id) { where(:id => id).select( :first_name, :last_name, :email) }
     # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates

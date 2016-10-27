@@ -1,63 +1,90 @@
 <%- model_class = Detail -%>
-<div class="qf b aml">
+
+<div class="row qf b aml">
+
+<div class="col-xs-1 ">
+</div>
+<div class="col-xs-3"> <!-- Where the picture and title goes -->
+	
+	<%= image_tag gravatar_url("#{@names.email}", 300), alt: "" %>
+	
+    <h1><%= @names.first_name %> <%= @names.last_name %></h1>
+	
+</div>
+ 
+<div class="col-xs-6"><!-- data personal-->
+	
+ 
+
+	
+ <div class="social">
+  
+ <dl class="dl-horizontal ">
+	  <% if @detail.details_email? %>
+	  <dt>
+		    <a href="http://linkedin.com/"><i class="fa  fa-envelope-o"></i></a></a>
+	  </dt>
+	  <dd><%= @detail.details_email %></dd>
+	  <%end%>
+	  <% if @detail.cellphone? %>
+	  <dt>
+		  <a href="http://twitter.com/"><i class="fa fa-phone"></i></a></dt>
+	  <dd><%= @detail.cellphone %></dd>
+	  <%end%>
+ 
+	  <% if @detail.social_link_1? %>
+	  <dt><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></dt>
+	  <dd><%= @detail.social_link_1 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_2? %>
+	  <dt><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></dt>
+	  <dd><%= @detail.social_link_2 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_3? %>
+	  <dt>
+		  <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+		</dt>
+	  <dd><%= @detail.social_link_3 %></dd>
+	  <%end%>
+	  
+	  <% if @detail.social_link_4? %>
+	  <dt><a href="http://facebook.com/"><i class="fa fa-twitter"></i></a></dt>
+	  <dd><%= @detail.social_link_4 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_5? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_5) %>:</strong></dt>
+	  <dd><%= @detail.social_link_5 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_6? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_6) %>:</strong></dt>
+	  <dd><%= @detail.social_link_6 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_7? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_7) %>:</strong></dt>
+	  <dd><%= @detail.social_link_7 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_8? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_8) %>:</strong></dt>
+	  <dd><%= @detail.social_link_8 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_9? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_9) %>:</strong></dt>
+	  <dd><%= @detail.social_link_9 %></dd>
+	  <%end%>
+	  <% if @detail.social_link_10? %>
+	  <dt><strong><%= model_class.human_attribute_name(:social_link_10) %>:</strong></dt>
+	  <dd><%= @detail.social_link_10 %></dd>
+	  <%end%>
+	</dl>
+</div>	
+	
+</div>
+<div class="col-xs-2">
+</div>
 
  
-  <h1><%= @names.first_name %> <%= @names.last_name %></h1>
- 
-
-<dl class="dl-horizontal">
  
  
-  <% if @detail.details_email? %>
-  <dt><strong><%= model_class.human_attribute_name(:details_email) %>:</strong></dt>
-  <dd><%= @detail.details_email %></dd>
-  <%end%>
-  <% if @detail.cellphone? %>
-  <dt><strong><%= model_class.human_attribute_name(:cellphone) %>:</strong></dt>
-  <dd><%= @detail.cellphone %></dd>
-  <%end%>
- 
-  <% if @detail.social_link_1? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_1) %>:</strong></dt>
-  <dd><%= @detail.social_link_1 %></dd>
-  <%end%>
-  <% if @detail.social_link_2? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_2) %>:</strong></dt>
-  <dd><%= @detail.social_link_2 %></dd>
-  <%end%>
-  <% if @detail.social_link_3? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_3) %>:</strong></dt>
-  <dd><%= @detail.social_link_3 %></dd>
-  <%end%>
-  <% if @detail.social_link_4? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_4) %>:</strong></dt>
-  <dd><%= @detail.social_link_4 %></dd>
-  <%end%>
-  <% if @detail.social_link_5? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_5) %>:</strong></dt>
-  <dd><%= @detail.social_link_5 %></dd>
-  <%end%>
-  <% if @detail.social_link_6? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_6) %>:</strong></dt>
-  <dd><%= @detail.social_link_6 %></dd>
-  <%end%>
-  <% if @detail.social_link_7? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_7) %>:</strong></dt>
-  <dd><%= @detail.social_link_7 %></dd>
-  <%end%>
-  <% if @detail.social_link_8? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_8) %>:</strong></dt>
-  <dd><%= @detail.social_link_8 %></dd>
-  <%end%>
-  <% if @detail.social_link_9? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_9) %>:</strong></dt>
-  <dd><%= @detail.social_link_9 %></dd>
-  <%end%>
-  <% if @detail.social_link_10? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_10) %>:</strong></dt>
-  <dd><%= @detail.social_link_10 %></dd>
-  <%end%>
-</dl>
 
 </div>
 

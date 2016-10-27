@@ -1,7 +1,6 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
-@import "bootstrap";
-
+@import "bootstrap"; 
 
 @import url('http://fonts.googleapis.com/css?family=Open+Sans'); 
 @import url('http://fonts.googleapis.com/css?family=Helvetica Neue');
@@ -14,6 +13,8 @@
 .pull-left{vertical-align:left;bottom:0;}
 .pull-left-image{vertical-align:left;bottom:0;}
    $bodyblue: #e5e5e5; //#10C7C7; 
+ 
+
  
 .body{
 	 
@@ -36,6 +37,80 @@
 	
 	margin-bottom:-20px;
 }
+
+
+.social ul {
+	overflow: auto;
+}
+
+.social ul li {
+	list-style-type: none;
+	float: left;
+	
+}
+
+.social ul li a i { 
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 15%;
+}
+
+ 
+.social dl {
+	overflow: auto;
+	padding-top: 2%;
+}
+
+.social dl dt {
+	list-style-type: none;
+	float: left;
+	padding-top: 2%;
+}
+
+.social dl dd {
+	list-style-type: none;
+	text-align: left;
+	padding-top: 4%;
+}
+
+.social dl dt a i { 
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 5%;
+}
+ 
+ 
+
+.fa-facebook {
+	background:#3b5998
+} 
+.fa-linkedin {
+	background:#007bb6
+}
+.fa-twitter {
+	background:#00aced
+}
+.fa-google-plus {
+	background:#dd4b39
+} 
+
+ .fa-envelope-o {
+ 	background:#dd4b39
+ } 
+ 
+ .fa-phone {
+ 	background:#00aced
+ } 
 
 .stepwizard-step button[disabled] {
     opacity: 1 !important;

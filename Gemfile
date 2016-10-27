@@ -13,8 +13,9 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
- 
-gem "font-awesome-rails" 
+gem 'twitter-text', '~> 1.14'
+gem 'public_suffix'
+gem "font-awesome-rails"  
 gem 'i18n_generators', '~> 2.1', '>= 2.1.1'
 gem 'bootstrap-sass'
 gem 'devise'
