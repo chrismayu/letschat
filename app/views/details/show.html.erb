@@ -7,101 +7,26 @@
     <div class="row">  
  <div class="col-sm-offset-1 col-sm-10">
  <h3>Your account is active and ready to be used:</h3>
- <br>
+ 
  <h4> Send people here:  <%= link_to "#{ENV['DOMAIN_NAME']}/#{current_user.name}", root_url+ "#{current_user.name}" %></h4>
- <br>
-
  
 
-<dl class="dl-horizontal">
- 
-  <% if @detail.email_able? %>
-  <dt><strong><%= model_class.human_attribute_name(:email_able) %>:</strong></dt>
-  <dd><%= @detail.email_able %></dd>
-  <%end%>
-  <% if @detail.details_email? %>
-  <dt><strong><%= model_class.human_attribute_name(:details_email) %>:</strong></dt>
-  <dd><%= @detail.details_email %></dd>
-  <%end%>
-  <% if @detail.cellphone? %>
-  <dt><strong><%= model_class.human_attribute_name(:cellphone) %>:</strong></dt>
-  <dd><%= @detail.cellphone %></dd>
-  <%end%>
-  <% if @detail.phone2? %>
-  <dt><strong><%= model_class.human_attribute_name(:phone2) %>:</strong></dt>
-  <dd><%= @detail.phone2 %></dd>
-  <%end%>
-  <% if @detail.country_id? %>
-  <dt><strong><%= model_class.human_attribute_name(:country_id) %>:</strong></dt>
-  <dd><%= @detail.country_id %></dd>
-  <%end%>
-  <% if @detail.state_id? %>
-  <dt><strong><%= model_class.human_attribute_name(:state_id) %>:</strong></dt>
-  <dd><%= @detail.state_id %></dd>
-  <%end%>
-  <% if @detail.city? %>
-  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
-  <dd><%= @detail.city %></dd>
-  <%end%>
-  <% if @detail.address? %>
-  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
-  <dd><%= @detail.address %></dd>
-  <%end%>
-  <% if @detail.province? %>
-  <dt><strong><%= model_class.human_attribute_name(:province) %>:</strong></dt>
-  <dd><%= @detail.province %></dd>
-  <%end%>
-  <% if @detail.country? %>
-  <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
-  <dd><%= @detail.country %></dd>
-  <%end%>
-  <% if @detail.social_link_1? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_1) %>:</strong></dt>
-  <dd><%= @detail.social_link_1 %></dd>
-  <%end%>
-  <% if @detail.social_link_2? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_2) %>:</strong></dt>
-  <dd><%= @detail.social_link_2 %></dd>
-  <%end%>
-  <% if @detail.social_link_3? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_3) %>:</strong></dt>
-  <dd><%= @detail.social_link_3 %></dd>
-  <%end%>
-  <% if @detail.social_link_4? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_4) %>:</strong></dt>
-  <dd><%= @detail.social_link_4 %></dd>
-  <%end%>
-  <% if @detail.social_link_5? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_5) %>:</strong></dt>
-  <dd><%= @detail.social_link_5 %></dd>
-  <%end%>
-  <% if @detail.social_link_6? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_6) %>:</strong></dt>
-  <dd><%= @detail.social_link_6 %></dd>
-  <%end%>
-  <% if @detail.social_link_7? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_7) %>:</strong></dt>
-  <dd><%= @detail.social_link_7 %></dd>
-  <%end%>
-  <% if @detail.social_link_8? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_8) %>:</strong></dt>
-  <dd><%= @detail.social_link_8 %></dd>
-  <%end%>
-  <% if @detail.social_link_9? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_9) %>:</strong></dt>
-  <dd><%= @detail.social_link_9 %></dd>
-  <%end%>
-  <% if @detail.social_link_10? %>
-  <dt><strong><%= model_class.human_attribute_name(:social_link_10) %>:</strong></dt>
-  <dd><%= @detail.social_link_10 %></dd>
-  <%end%>
-</dl>
- 
-<%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_detail_path(@detail), :class => 'btn btn-default' %>
+ <%= render :partial => 'show', :detail => @detail %>
+
+
+
 			  
+    <div class="row">  
+ <div class="col-md-6">
+	<%= link_to "Edit Details above",
+	              edit_detail_path(@detail), :class => 'btn btn-default btn-block ' %> 
+    </div>
+	 
+ <div class="col-md-6">	
+	 <%= link_to "Edit account",  edit_user_registration_path , :class => 'btn btn-primary btn-block' %> 
+   
+ </div> 
 
-<%= link_to 'Edit account', edit_user_registration_path, class: 'nav-link' %>		  
 			  
  </div> 
  </div>

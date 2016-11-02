@@ -1,0 +1,129 @@
+<%- model_class = Detail -%>
+<div class="row qf b aml">
+<div class="col-sm-1 ">
+</div>
+<div class="col-sm-3 "> <!-- Where the picture and title goes -->
+	
+<div class="image_show">	
+	<%= image_tag gravatar_url("#{@names.email}", 300), alt: "" %>
+	
+    <h2><%= @names.first_name %> <%= @names.last_name %></h2>
+</div></div>
+ 
+<div class="col-sm-8"><!-- data personal-->
+ <div class="social">
+<dl class="dl-horizontal">
+  <% if @detail.email_able? %>
+  <dt><strong><%= model_class.human_attribute_name(:email_able) %>:</strong></dt>
+  <dd><%= @detail.email_able %></dd>
+  <%end%>
+  
+  <% if @detail.details_email? %>
+  <dt>
+	    <a href="http://linkedin.com/"><i class="fa  fa-envelope-o"></i></a></a>
+  </dt>
+  <dd><%= @detail.details_email %></dd>
+  <%end%>
+  <% if @detail.cellphone? %>
+  <dt>
+	  <a href="http://twitter.com/"><i class="fa fa-phone"></i></a></dt>
+  <dd><%= @detail.cellphone %></dd>
+  <%end%>
+  
+<% if @detail.address? && @detail.province %>
+<address>
+<br />
+   <% if @detail.address? %> <%= @detail.address %>  <%end%>
+ <br /> 
+   <% if @detail.country_id? %>  <%= @detail.country_id %> <%end%>
+   <% if @detail.state_id? %> <%= @detail.state_id %>  <%end%>
+   <% if @detail.province? %><%= @detail.province %><%end%>
+ <br /> <abbr title="Phone">P:</abbr>  <% if @detail.phone2? %><%= @detail.phone2 %><%end%>
+</address>
+  <%end%>
+ 
+  <% if @detail.social_link_1? %>
+  <dt> 
+  <i class="fa <%= font_css(@detail.social_link_1_icon_id)%>"></i> 
+  </dt>
+  <dd> 
+  <%= link_to "#{@detail.social_link_1}", @detail.social_link_1_url, class: 'nav-link' %>	
+  
+  </dd>
+  <% end%>
+  
+  <% if @detail.social_link_2? %>
+  <dt> 
+  <i class="fa <%= font_css(@detail.social_link_2_icon_id)%>"></i> 
+  </dt>
+  <dd> 
+  <%= link_to "#{@detail.social_link_2}", @detail.social_link_2_url, class: 'nav-link' %>	
+ 
+  </dd>
+  <% end%>
+  
+  <% if @detail.social_link_3? %>
+  <dt> 
+  <i class="fa <%= font_css(@detail.social_link_3_icon_id)%>"></i> 
+  </dt>
+  <dd> 
+  <%= link_to "#{@detail.social_link_3}", @detail.social_link_3_url, class: 'nav-link' %>	
+ 
+  </dd>
+  <% end%>
+  
+  <% if @detail.social_link_4? %>
+  <dt> 
+  <i class="fa <%= font_css(@detail.social_link_4_icon_id)%>"></i> 
+  </dt>
+  <dd> 
+  <%= link_to "#{@detail.social_link_4}", @detail.social_link_4_url, class: 'nav-link' %>	
+ 
+  </dd>
+  <% end%>
+  
+  <% if @detail.social_link_5? %>
+  <dt> 
+  <i class="fa <%= font_css(@detail.social_link_5_icon_id)%>"></i> 
+  </dt>
+  <dd> 
+  <%= link_to "#{@detail.social_link_5}", @detail.social_link_5_url, class: 'nav-link' %>	
+ 
+  </dd>
+  <% end%>
+  
+   
+  <% if @detail.social_link_6? %>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_6) %>:</strong></dt>
+  <dd><%= @detail.social_link_6 %></dd>
+  <%end%>
+  <% if @detail.social_link_7? %>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_7) %>:</strong></dt>
+  <dd><%= @detail.social_link_7 %></dd>
+  <%end%>
+  <% if @detail.social_link_8? %>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_8) %>:</strong></dt>
+  <dd><%= @detail.social_link_8 %></dd>
+  <%end%>
+  <% if @detail.social_link_9? %>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_9) %>:</strong></dt>
+  <dd><%= @detail.social_link_9 %></dd>
+  <%end%>
+  <% if @detail.social_link_10? %>
+  <dt><strong><%= model_class.human_attribute_name(:social_link_10) %>:</strong></dt>
+  <dd><%= @detail.social_link_10 %></dd>
+  <%end%>
+</dl>
+ </div>
+ 
+	
+ </div>
+ 
+
+ 
+ 
+ 
+
+ </div>
+
+ 

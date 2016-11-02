@@ -1,0 +1,27 @@
+<div class="row">
+ <div class="col-md-2">
+	 <strong>Social link 1: </strong> 
+ </div>
+ <div class="col-md-3">	
+     <%= f.input :social_link_4_icon_id, collection: @icons, label_method: :name, value_method: :id,label: "Social Media", include_blank: true, label: false, selected: @detail.social_link_4_icon_id%>
+</div>
+<div class="col-md-3">
+ <%= f.input :social_link_4 ,  :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false%>
+ <%= error_span(@detail[:social_link_4]) %>
+ </div>
+ <div class="col-md-4">
+ <%= f.input :social_link_4_url , :placeholder=>"URL of your Social Media",   :input_html => { :class => "enroll_input col-xs-4"}, label: false %>
+ <%= error_span(@detail[:social_link_4_url]) %>
+ </div>
+ </div>
+ 
+ 
+ <% if @detail.social_link_5? %>
+ <dt> 
+ <i class="fa <%= font_css(@detail.social_link_5_icon_id)%>"></i> 
+ </dt>
+ <dd> 
+ <%= link_to "#{@detail.social_link_5}", @detail.social_link_5_url, class: 'nav-link' %>	
+ 
+ </dd>
+ <% end%>

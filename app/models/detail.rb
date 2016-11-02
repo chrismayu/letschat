@@ -2,6 +2,7 @@ class Detail < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
   belongs_to :user
+  has_many :icons
   
   
   def slug_candidates

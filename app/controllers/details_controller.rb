@@ -27,8 +27,10 @@ class DetailsController < ApplicationController
   # GET /details/1
   # GET /details/1.json
   def show
+   
      @detail = current_user.detail
-         authorize @detail
+      @names = User.names(@detail.user_id).first
+     #    authorize @detail
   end
 
   # GET /details/new
@@ -39,7 +41,8 @@ class DetailsController < ApplicationController
 
   # GET /details/1/edit
   def edit
-    authorize @detail
+   # authorize @detail
+   @icons = Icon.all
   end
 
   # POST /details
@@ -61,7 +64,7 @@ class DetailsController < ApplicationController
   # PATCH/PUT /details/1
   # PATCH/PUT /details/1.json
   def update
-    authorize @detail
+   # authorize @detail
     respond_to do |format|
       if @detail.update(detail_params)
         format.html { redirect_to @detail, notice: 'Your Information has been successfully updated.' }
@@ -91,6 +94,6 @@ class DetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def detail_params
-      params.require(:detail).permit(:user_id, :name, :slug, :email_able, :details_email, :cellphone, :phone2, :country_id, :state_id, :city, :address, :province, :country, :social_link_1, :social_link_2, :social_link_3, :social_link_4, :social_link_5, :social_link_6, :social_link_7, :social_link_8, :social_link_9, :social_link_10)
+      params.require(:detail).permit(:user_id, :name, :slug, :email_able, :details_email, :cellphone, :phone2, :country_id, :state_id, :city, :address, :province, :country, :social_link_1, :social_link_2, :social_link_3, :social_link_4, :social_link_5, :social_link_6, :social_link_7, :social_link_8, :social_link_9, :social_link_10, :social_link_1_icon, :social_link_1_url, :social_link_1_icon_id,  :social_link_2_icon, :social_link_2_url, :social_link_2_icon_id,  :social_link_3_icon, :social_link_3_url, :social_link_3_icon_id,  :social_link_4_icon, :social_link_4_url, :social_link_4_icon_id,  :social_link_5_icon, :social_link_5_url, :social_link_5_icon_id,  :social_link_6_icon, :social_link_6_url, :social_link_6_icon_id,  :social_link_7_icon, :social_link_7_url, :social_link_7_icon_id,  :social_link_8_icon, :social_link_8_url, :social_link_8_icon_id,  :social_link_9_icon, :social_link_9_url, :social_link_9_icon_id,  :social_link_10_icon, :social_link_10_url, :social_link_10_icon_id)
     end
 end

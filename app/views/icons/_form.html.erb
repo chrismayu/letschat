@@ -1,0 +1,14 @@
+<%= simple_form_for @icon, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :user_id %>
+  <%= error_span(@icon[:user_id]) %>
+  <%= f.input :detail_id %>
+  <%= error_span(@icon[:detail_id]) %>
+  <%= f.input :icon_css %>
+  <%= error_span(@icon[:icon_css]) %>
+  <%= f.input :name %>
+  <%= error_span(@icon[:name]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                icons_path, :class => 'btn btn-default' %>
+<% end %>
