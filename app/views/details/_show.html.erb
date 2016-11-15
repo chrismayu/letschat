@@ -5,8 +5,18 @@
 <div class="col-sm-3 "> <!-- Where the picture and title goes -->
 	
 <div class="image_show">	
-	<%= image_tag gravatar_url("#{@names.email}", 300), alt: "" %>
+	 
+	 <% if @names.profile_image_id? %>
+	<%= image_tag attachment_url(@names, :profile_image, :fill, 300, 300, format: "jpg") %>
+ <%else%>
+	<i class="fa fa-user-o" aria-hidden="true"></i>
 	
+    
+   	 <%= link_to "Add Picture",  edit_user_registration_path , :class => 'btn btn-primary btn-block' %> 
+ 
+	<%end%>
+	
+ 
     <h2><%= @names.first_name %> <%= @names.last_name %></h2>
 </div></div>
  

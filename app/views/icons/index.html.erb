@@ -6,25 +6,20 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      
       <th>Image</th>
       <th><%= model_class.human_attribute_name(:icon_css) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th> 
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   
   <tbody>
     <% @icons.each do |icon| %>
-      <tr>
-        <td><%= link_to icon.id, icon_path(icon) %></td>
+      <tr> 
        
-        <td> <i class="fa <%= icon.icon_css %>"  aria-hidden="true"></i> </td>
+        <td> <i class="fa <%= icon.icon_css %>" ></i> </td>
         <td><%= icon.icon_css %></td>
-        <td><%= icon.name %></td>
-        <td><%=l icon.created_at %></td>
+        <td><%= icon.name %></td> 
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_icon_path(icon), :class => 'btn btn-default btn-xs' %>

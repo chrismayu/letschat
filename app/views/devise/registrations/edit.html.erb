@@ -25,6 +25,26 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
     </div>
+	
+    <fieldset>
+       
+  
+      <div class="form-group">
+        <%= f.label :profile_image %> 
+	    <%= f.attachment_field :profile_image %>
+
+	       <% if @user.profile_image_id? %>
+	         <%= image_tag attachment_url(@user, :profile_image, :fill, 100, 100, format: "jpg") %>
+
+	         <%= f.check_box :remove_profile_image %>
+	         <%= f.label :remove_profile_image %>
+	       <% end %>
+      </div>
+    </fieldset>
+	
+	
+	<br>
+	
     <fieldset>
       <p>Leave these fields blank if you don't want to change your password.</p>
       <div class="form-group">

@@ -42,6 +42,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-sweetalert'
   gem 'rails-assets-font-awsome'
 end
+
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
  
 group :development do
   gem "letter_opener"

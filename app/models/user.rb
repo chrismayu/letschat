@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   extend FriendlyId
+  attachment :profile_image
   friendly_id :slug_candidates, use: :slugged
   enum role: [:user, :vip, :admin]
   after_save :set_detail
@@ -11,9 +12,14 @@ class User < ActiveRecord::Base
 
   before_validation :downcase_name
 
+
+ 
+  attachment :profile_image, content_type: ["image/jpeg", "image/png", "image/gif"]
+ 
+ 
   has_one :detail
  
-  scope :names, -> (id) { where(:id => id).select( :first_name, :last_name, :email) }
+  scope :names, -> (id) { where(:id => id).select( :profile_image_id, :first_name, :last_name, :email) }
     # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates
