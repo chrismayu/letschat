@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :icons
+ 
   devise_for :users, controllers: {registrations: "registrations" }
   
    
@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   
   resources :details   
   get ':id' => 'details#outside_show' 
+  
+  
+   resources :icons
 end

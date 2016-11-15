@@ -45,6 +45,7 @@ end
 
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
+gem "refile-s3"
  
 group :development do
   gem "letter_opener"
