@@ -9,4 +9,4 @@ aws = {
 Refile.cache = Refile::S3.new(prefix: "cache", **aws,max_size: 3.megabytes)
 Refile.store = Refile::S3.new(prefix: "store", **aws)
 
- 
+  
