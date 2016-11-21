@@ -13,6 +13,10 @@
 	 <strong>Social link 1: </strong> 
  </div>
  <div class="col-md-3">	
+	 
+ 
+	 <%= render :partial => 'icons' %>
+	 
      <%= f.input :social_link_1_icon_id, collection: @icons, label_method: :name, value_method: :id,label: "Social Media", include_blank: true, label: false, selected: @detail.social_link_1_icon_id%>
 </div>
 <div class="col-md-3">
