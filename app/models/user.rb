@@ -29,6 +29,10 @@ class User < ActiveRecord::Base
   end
 
 
+  def self.front_page
+    
+    user = User.all
+  end
 
   def to_param
     name

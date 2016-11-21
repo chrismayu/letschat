@@ -51,13 +51,10 @@ class Detail < ActiveRecord::Base
       puts "hi3"
        u = "hi"
     end
-     
-    #get_domain("https://www.facebook.com")
-    #get_domain("https://www.facebook.com/crystal.brownlee.7?hc_ref=NEWSFEED")
+      
     
   end
-  
-  #uri = URI("https://www.facebook.com/crystal.brownlee.7?hc_ref=NEWSFEED")
-  uri = URI("www.facebook.com/crystal.brownlee.7?hc_ref=NEWSFEED")
+   
+ # uri = URI("www.facebook.com/crystal.brownlee.7?hc_ref=NEWSFEED")
   
 end

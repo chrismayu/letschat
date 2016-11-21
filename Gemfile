@@ -46,7 +46,9 @@ end
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem "refile-s3"
- 
+   gem 'fabrication'
+   gem 'faker'
+   
 group :development do
   gem "letter_opener"
   gem 'better_errors'
@@ -60,10 +62,11 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
+
 end
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'faker'
+ 
   gem 'rspec-rails'
 end
 group :production do

@@ -1,5 +1,37 @@
-<div class="block-semi-tansparent">
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<div class="block-semi-tansparent"> 
+ <div class="row">
+ <% @users.each.with_index  do |user, index| %> 
+ 
+   <% if((index + 1) % 6 == 0)%>
+    </div>
+	 <div class="row">
+ <% end %>
+ 
+ <div class="col-sm-2 block-semi-tansparent"> <!-- Where the picture and title goes -->
+	
+ <div class="image_show">	
+	 
+ 	 <% if user.profile_image_id? %>
+ 	<%= image_tag attachment_url(user, :profile_image, :fill, 300, 300, format: "jpg") %>
+  <%else%>
+ 	<i class="fa fa-user-o" aria-hidden="true"></i>
+ 
+ 	<%end%>
+	
+ 
+     <h3><%= user.first_name %> <%= user.last_name %></h3>
+ </div></div>
+  
+  
+ 
 
+ 
+ 
+   
+ 
+ <% end %>
+   </div>
+ 
+ 
+ 
  </div>

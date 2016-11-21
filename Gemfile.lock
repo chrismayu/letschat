@@ -104,6 +104,7 @@ GEM
     exception_handler (0.5.1)
     excon (0.53.0)
     execjs (2.7.0)
+    fabrication (2.16.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.7.0)
@@ -381,6 +382,7 @@ DEPENDENCIES
   database_cleaner
   devise
   exception_handler (~> 0.5.0)
+  fabrication
   factory_girl_rails
   faker
   figaro
