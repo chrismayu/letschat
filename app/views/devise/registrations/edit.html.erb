@@ -4,7 +4,7 @@
  
 		<div class="row ">
 		 <div class="qf b aml text-center">
-		   <h4>Edit Your Account Information <%= resource_name.to_s.humanize %></h4>
+		   <h4>Edit Your Account Information</h4>
 		 </div>
 		</div>
  
@@ -84,11 +84,11 @@
 	  <p><strong>Change your Password.</strong></p>
 	  <p>Leave these fields blank if you don't want to change your password.</p>
       <div class="form-group">
-        <%= f.label :password %>
+        <%= f.label "New Password" %>
         <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %>
       </div>
       <div class="form-group">
-        <%= f.label :password_confirmation %>
+        <%= f.label "New Password Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
     </fieldset>
@@ -110,7 +110,9 @@
         <%= f.password_field :current_password, class: 'form-control' %>
       </div>
     </fieldset>
-    <%= f.submit 'Update', :class => 'btn btn-primary' %>
+    <%= f.submit 'Update', :class => 'btn btn-primary' %> &nbsp;&nbsp;
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  root_path, :class => 'btn btn-default' %>
   <% end %>
  
 </div>
@@ -127,9 +129,9 @@
 
 
  
-<h4>Cancel Your Account</h4>
+<h4>Delete Your Account</h4>
 <p>Unhappy? We'll be sad to see you go. This can not be undone.
-<%= button_to "Yes Cancel My Account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-danger ' %></p>
+<%= button_to "Yes Delete My Account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-danger ' %></p>
  
 
 </div>

@@ -1,13 +1,12 @@
 <%- model_class = Detail -%>
 <div class="row qf b aml">
-<div class="col-sm-1 ">
-</div>
-<div class="col-sm-3 "> <!-- Where the picture and title goes -->
+ 
+<div class="col-sm-4"> <!-- Where the picture and title goes -->
 	
 <div class="image_show">	
 	 
 	 <% if @names.profile_image_id? %>
-	<%= image_tag attachment_url(@names, :profile_image, :fill, 300, 300, format: "jpg") %>
+	<%= image_tag attachment_url(@names, :profile_image, :fill, 350, 350, format: "jpg") %>
  <%else%>
 	<i class="fa fa-user-o" aria-hidden="true"></i>
 	
