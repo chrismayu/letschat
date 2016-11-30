@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
  
 
-  
+   resources :icons
   resources :details   
   get ':id' => 'details#outside_show' 
   
   
-   resources :icons
+  
 end

@@ -7,6 +7,8 @@
   <%= error_span(@icon[:icon_css]) %>
   <%= f.input :name %>
   <%= error_span(@icon[:name]) %>
+  <%= f.input :top_icons %>
+  <%= error_span(@icon[:top_icons]) %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

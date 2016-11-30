@@ -5,8 +5,7 @@
  
   <div class="block"> 
     <div class="row">  
- <div class="col-sm-offset-1 col-sm-10">
- <h3>Your account is active and ready to be used:</h3>
+ <div class="col-sm-offset-1 col-sm-10"> 
  
  <h4> Send people to:  <%= link_to "#{ENV['DOMAIN_NAME']}/#{current_user.name}", root_url+ "#{current_user.name}" %></h4>
  
@@ -23,7 +22,7 @@
     </div>
 	 
  <div class="col-md-6">	
-	<%= link_to "Edit Details above",
+	<%= link_to "Edit Your Social Lnks above",
 	              edit_detail_path(@detail), :class => 'btn btn-default btn-block ' %>
    
  </div> 

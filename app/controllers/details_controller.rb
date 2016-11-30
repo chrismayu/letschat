@@ -42,7 +42,12 @@ class DetailsController < ApplicationController
   # GET /details/1/edit
   def edit
    # authorize @detail
+   
+
    @icons = Icon.all
+    @iconss = Icon.dropdown
+   
+   
   end
 
   # POST /details
