@@ -18,7 +18,7 @@
  
  <%= f.input :social_link_1_icon_id,
   :as => :grouped_select,
-  :collection =>  @iconss,
+  :collection =>  @icons,
   :group_method => :last, :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false %>
   
  
@@ -39,7 +39,14 @@
 	 <strong>Social link 2: </strong> 
  </div>
  <div class="col-md-3">	
-     <%= f.input :social_link_2_icon_id, collection: @icons, label_method: :name, value_method: :id,label: "Social Media", include_blank: true, label: false, selected: @detail.social_link_2_icon_id%>
+  
+	 
+	 <%= f.input :social_link_2_icon_id,
+	  :as => :grouped_select,
+	  :collection =>  @icons,
+	  :group_method => :last, :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false %>
+	 
+	 
 </div>
 <div class="col-md-3">
  <%= f.input :social_link_2 ,  :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false%>
@@ -57,7 +64,12 @@
 	 <strong>Social link 3: </strong> 
  </div>
  <div class="col-md-3">	
-     <%= f.input :social_link_3_icon_id, collection: @icons, label_method: :name, value_method: :id,label: "Social Media", include_blank: true, label: false, selected: @detail.social_link_3_icon_id%>
+ 
+	 <%= f.input :social_link_3_icon_id,
+	  :as => :grouped_select,
+	  :collection =>  @icons,
+	  :group_method => :last, :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false %>
+	 
 </div>
 <div class="col-md-3">
  <%= f.input :social_link_3 ,  :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false%>
@@ -75,7 +87,14 @@
  	 <strong>Social link 4: </strong> 
   </div>
   <div class="col-md-3">	
-      <%= f.input :social_link_4_icon_id, collection: @icons, label_method: :name, value_method: :id,label: "Social Media", include_blank: true, label: false, selected: @detail.social_link_4_icon_id%>
+      
+	  
+	  <%= f.input :social_link_4_icon_id,
+	   :as => :grouped_select,
+	   :collection =>  @icons,
+	   :group_method => :last, :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false %>
+	  
+	  
  </div>
  <div class="col-md-3">
   <%= f.input :social_link_4 ,  :placeholder=>"Description", :input_html => { :class => "enroll_input col-xs-4"} , label: false%>

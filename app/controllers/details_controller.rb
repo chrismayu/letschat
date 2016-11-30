@@ -43,9 +43,7 @@ class DetailsController < ApplicationController
   def edit
    # authorize @detail
    
-
-   @icons = Icon.all
-    @iconss = Icon.dropdown
+    @icons = Icon.dropdown
    
    
   end
