@@ -1,6 +1,8 @@
 class DetailsController < ApplicationController
   before_action :set_detail, only: [ :edit, :update, :destroy]
-    require 'uri'
+  before_action :authenticate_user!, except: [ :outside]
+  after_action :verify_authorized, only:  [ :outside]
+  require 'uri'
 
   # GET /details
   # GET /details.json
@@ -30,7 +32,7 @@ class DetailsController < ApplicationController
    
      @detail = current_user.detail
       @names = User.names(@detail.user_id).first
-     #    authorize @detail
+         authorize @detail
   end
 
   # GET /details/new
@@ -41,10 +43,9 @@ class DetailsController < ApplicationController
 
   # GET /details/1/edit
   def edit
-   # authorize @detail
+    authorize @detail
    
     @icons = Icon.dropdown
-   
    
   end
 
@@ -67,7 +68,7 @@ class DetailsController < ApplicationController
   # PATCH/PUT /details/1
   # PATCH/PUT /details/1.json
   def update
-   # authorize @detail
+    authorize @detail
     respond_to do |format|
       if @detail.update(detail_params)
         format.html { redirect_to @detail, notice: 'Your Information has been successfully updated.' }

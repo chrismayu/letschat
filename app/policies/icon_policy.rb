@@ -1,22 +1,7 @@
-class DetailPolicy < ApplicationPolicy
+class IconPolicy < ApplicationPolicy
   
-  def new?
-    true
-  end
-  
-  def create?
-    true
-  end
-  
-  def outside_show?
-    true
-  end
-  
-  def show?
-    true
-  end
-   
-   
+  alias_method :index?, :admin_or_current_user? 
+  alias_method :new?, :admin_or_current_user?  
   alias_method :edit?, :admin_or_current_user? 
   alias_method :create?, :admin_or_current_user? 
   alias_method :show?, :admin_or_current_user? 
