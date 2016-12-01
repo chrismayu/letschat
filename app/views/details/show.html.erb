@@ -1,8 +1,5 @@
 <%- model_class = Detail -%>
  
-
- 
- 
   <div class="block"> 
     <div class="row">  
  <div class="col-sm-offset-1 col-sm-10"> 
@@ -11,23 +8,17 @@
  
 
  <%= render :partial => 'show', :detail => @detail %>
-
-
-
-			  
+ 
     <div class="row">  
- <div class="col-md-6">
-
-				   <%= link_to "Edit account",  edit_user_registration_path , :class => 'btn btn-primary btn-block' %> 
+ <div class="col-md-6"> 
+				   <%= link_to "Edit Account",  edit_user_registration_path , :class => 'btn btn-primary btn-block' %> 
     </div>
 	 
  <div class="col-md-6">	
-	<%= link_to "Edit Your Social Lnks above",
+	<%= link_to "Edit Your Social Links above",
 	              edit_detail_path(@detail), :class => 'btn btn-default btn-block ' %>
    
- </div> 
-
-			  
+ </div> 		  
  </div> 
  </div>
  </div>

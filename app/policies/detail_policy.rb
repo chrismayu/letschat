@@ -12,10 +12,7 @@ class DetailPolicy < ApplicationPolicy
     true
   end
   
-  def show?
-    true
-  end
-   
+ 
    
   alias_method :edit?, :admin_or_current_user? 
   alias_method :create?, :admin_or_current_user? 
