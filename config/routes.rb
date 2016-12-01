@@ -14,7 +14,12 @@ Rails.application.routes.draw do
 
    resources :icons
   resources :details   
-  get ':id' => 'details#outside_show' 
+ # get ':id' => 'details#outside_show' 
+  
+  match ':id', :as => :outside_show, 
+                                 :via => :get,
+                                 :controller => :details, 
+                                 :action => :outside_show
   
   
   

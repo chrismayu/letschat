@@ -1,7 +1,7 @@
 class DetailsController < ApplicationController
   before_action :set_detail, only: [ :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [ :outside]
-  after_action :verify_authorized, only:  [ :outside]
+  before_action :authenticate_user!, except: [ :outside_show]
+  after_action :verify_authorized, except:  [ :outside_show]
   require 'uri'
 
   # GET /details
