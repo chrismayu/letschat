@@ -16,6 +16,15 @@ Rails.application.routes.draw do
   resources :details   
  # get ':id' => 'details#outside_show' 
   
+ 
+  
+ match 'contact' => 'contact#new',  :via => :get
+ match 'contact' => 'contact#create', :via => :post
+ 
+ match 'support' => 'support#new',  :via => :get
+ match 'support' => 'support#create', :via => :post
+  
+  
   match ':id', :as => :outside_show, 
                                  :via => :get,
                                  :controller => :details, 
