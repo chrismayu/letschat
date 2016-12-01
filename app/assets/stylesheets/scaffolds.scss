@@ -1,15 +1,55 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans'); 
+@import url('http://fonts.googleapis.com/css?family=Helvetica Neue');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn');
+
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
+ 
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+
+html,body
+{
+height:100%;
+}
+
+#wrap
+{
+min-height: 100%; 
+}
+
+#main
+{
+overflow:auto;
+padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer
+{
+position: relative;
+margin-top: 30px; /* negative value of footer height */
+height: 30px;
+clear:both;
+padding-top:4px;
+font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 12px;
+background-color:#fff;
+}
+
+.footer-text{
+	
+	padding-left:20px;
 }
 
 pre {
