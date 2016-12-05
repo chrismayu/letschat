@@ -5,7 +5,7 @@ class VisitorsController < ApplicationController
     @users = User.front_page
     
      query = params[:q].presence || "*"
-     @users = User.search(query, suggest: true, limit: 20)
+     @users = User.search(query, suggest: true, limit: 200)
     
   end
   
