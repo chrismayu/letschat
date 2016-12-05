@@ -4,8 +4,8 @@ class VisitorsController < ApplicationController
     
     @users = User.front_page
     
-    query = params[:q].presence || "*"
-      @users = User.search(query, suggest: true)
+   # query = params[:q].presence || "*"
+    #  @users = User.search(query, suggest: true)
     
   end
   
