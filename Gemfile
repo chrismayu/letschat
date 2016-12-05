@@ -78,3 +78,15 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+
+
+gem 'acts-as-taggable-on' 
+ 
+
+gem 'searchkick', '~> 0.9.1'
+gem 'jquery-ui-rails'
+
+
+
+

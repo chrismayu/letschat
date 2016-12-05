@@ -5,6 +5,20 @@ class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
   after_save :set_detail
 
+
+  acts_as_taggable
+  
+  searchkick text_start: [:first_name, :last_name,:name, ], suggest: [:title]
+
+    def search_data
+      {
+        first_name: first_name,
+        last_name: last_name,
+        name: name,
+        tag_list: tag_list
+      }
+    end
+  
   validates_presence_of :name, :first_name, :last_name
   validates_format_of :name, :with => /\A[A-Za-z0-9-]+\z/, :message => 'The name can only contain alphanumeric characters and dashes.', :allow_blank => true
   validates_uniqueness_of :name, :case_sensitive => false, :message => "  is already in use"

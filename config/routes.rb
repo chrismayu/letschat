@@ -6,9 +6,17 @@ Rails.application.routes.draw do
    
   authenticated :user do
      root 'details#show', as: :authenticated_root
-      resources :users 
+     
+ 
   end
- # resources :users 
+
+ 
+ resources :visitors do
+   collection do
+     get :autocomplete
+   end
+ end
+ 
   root to: 'visitors#index'
  
 
