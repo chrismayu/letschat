@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   acts_as_taggable
   
-  searchkick text_start: [:first_name, :last_name,:name, ], suggest: [:title], settings: {index: {max_result_window: 100000}}
+  searchkick text_start: [:first_name, :last_name,:name, ], suggest: [:title], settings: {index: {max_result_window: 9000}}
  
     def search_data
       {
