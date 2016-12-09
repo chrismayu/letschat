@@ -1,24 +1,18 @@
 <%- model_class = Detail -%>
  
-  <div class="block"> 
-    <div class="row">  
- <div class="col-sm-offset-1 col-sm-10"> 
  
+<div class="row block-semi-tansparent">
+ <div class="col-sm-offset-1 col-sm-10"> 
+	 
+	 <br> 
+  <div class="qf b aml">
  <h4> Send people to:  <%= link_to "#{ENV['DOMAIN_NAME']}/#{current_user.name}", root_url+ "#{current_user.name}" %></h4>
  
 
  <%= render :partial => 'show', :detail => @detail %>
+
+ </div>  
+   <br> 
+ </div>     
+ </div>
  
-    <div class="row">  
- <div class="col-md-6"> 
-				   <%= link_to "Edit Account",  edit_user_registration_path , :class => 'btn btn-primary btn-block' %> 
-    </div>
-	 
- <div class="col-md-6">	
-	<%= link_to "Edit Your Social Links above",
-	              edit_detail_path(@detail), :class => 'btn btn-default btn-block ' %>
-   
- </div> 		  
- </div> 
- </div>
- </div>

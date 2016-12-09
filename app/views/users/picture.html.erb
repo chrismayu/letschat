@@ -1,0 +1,87 @@
+
+<div class="row block-semi-tansparent">
+	<div class="col-sm-offset-1 col-sm-10">
+ 
+		<div class="row ">
+		 <div class="qf b aml text-center">
+		   <h4>Your Picture</h4>
+		 </div>
+		</div>
+ 
+<br> 
+
+ 
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+<% unless resource.errors.empty? %>
+ <div class="row ">
+	 <div class="col-sm-10">
+		 <div class="qf b aml">
+    <%= devise_error_messages! %>	
+ 
+</div>
+</div>
+</div>	
+
+ <br> 
+ <%end%>
+ 
+ <div class="row ">
+	 
+	 <div class="col-sm-5">
+		 
+ 
+	 <div class="qf b aml">
+ 
+ 
+    <fieldset> 
+      <div class="form-group">
+        <%= f.label :profile_image %> 
+	  
+
+	       <% if @user.profile_image_id? %>
+	         <%= image_tag attachment_url(@user, :profile_image, :fill, 200, 200, format: "jpg") %>
+
+	         <%= f.check_box :remove_profile_image %>
+	         <%= f.label :remove_profile_image %>
+	       <% else %>
+		     <%= f.attachment_field :profile_image %>
+		     <% end %>
+      </div>
+    </fieldset>
+	
+    </div> 
+		<br>
+    
+ 
+ </div>
+ 
+ 
+  <div class="col-sm-5">
+ <div class="qf b aml">
+ 
+    <fieldset>
+      <p>You must enter your current password to make changes.</p>
+      <div class="form-group">
+        <%= f.label :current_password %>
+        <%= f.password_field :current_password, class: 'form-control' %>
+      </div>
+    </fieldset>
+    <%= f.submit 'Update', :class => 'btn btn-primary' %> &nbsp;&nbsp;
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  root_path, :class => 'btn btn-default' %>
+  <% end %>
+ 
+ </div>
+ 
+</div>
+ 
+ 
+</div>  <!-- Row  -->
+ 
+ <br>
+ 
+
+</div>  <!-- Row  -->
+ 
+ 
+ 

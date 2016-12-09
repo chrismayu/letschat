@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController  < Devise::RegistrationsController
   before_action :authenticate_user!
   after_action :verify_authorized
 
@@ -6,6 +6,17 @@ class UsersController < ApplicationController
     @users = User.all
     authorize User
   end
+
+  def picture
+    @user = User.friendly.find(params[:id])
+     authorize @user
+  end
+  
+  def password
+    @user = User.friendly.find(params[:id])
+     authorize @user 
+  end
+
 
   def show
     @user = User.friendly.find(params[:id])

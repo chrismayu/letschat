@@ -2,9 +2,19 @@
  
  <div class="row">
  <div class="col-md-12">
-
+	 
+<% if @detail.details_email.present? %>
   <%= f.input :details_email, :label=>"Your Email:", :placeholder=>"Your Email", :input_html => { :class => "enroll_input col-xs-4"}  %>
   <%= error_span(@detail[:details_email]) %>
+  
+  <%else%>
+  
+  <%= f.input :details_email, :label=>"Your Email:", :placeholder=>"Your Email", :input_html => { :class => "enroll_input col-xs-4", :value => current_user.email}  %>
+  <%= error_span(@detail[:details_email]) %>
+  
+  <%end%>
+  
+  
   <%= f.input :cellphone , :input_html => { :class => "enroll_input col-xs-4"} %>
   <%= error_span(@detail[:cellphone]) %>
 

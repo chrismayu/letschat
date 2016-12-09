@@ -1,10 +1,43 @@
+
 <% if user_signed_in? %>
-  <li class='nav-item'><%= link_to 'MY DETAILS', detail_path(current_user.id), class: 'nav-link' %></li>
+ 
+ 
+   <li class='nav-item'><%= link_to 'MY DETAILS', detail_path(current_user.id), class: 'nav-link' %></li>
+ 
+ <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">SETTING  <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+				  
+				  <li>
+					<%= link_to "Edit Your Social Links",
+					              edit_detail_path(current_user.detail), :class => 'dropdown-item ' %>
+					
+				  </li>
+            
+                <li>   <%= link_to "Edit Picture",  picture_users_path(:id => @current_user.id) , :class => 'dropdown-item' %> </li>
+			 
+			<li> <%= link_to "Edit Account",  edit_user_registration_path , :class => 'dropdown-item' %>  </li>
+				
+                <li><%= link_to "Change Your Password",  password_users_path(:id => @current_user.id) , :class => 'dropdown-item' %> </li>
+				
+				
+                
+         
+          </ul>
+ 
+ </li>
+<% end %>
+
+<% if user_signed_in? %>
+
   <li class='nav-item'><%= link_to 'SIGN OUT', destroy_user_session_path, :method=>'delete', class: 'nav-link' %></li>
 <% else %>
   <li class='nav-item'><%= link_to 'SIGN IN', new_user_session_path, class: 'nav-link' %></li>
   <li class='nav-item'><%= link_to 'SIGN UP', new_user_registration_path, class: 'nav-link' %></li>
 <% end %>
+
+
+
 <% if user_signed_in? %>
   <% if current_user.try(:admin?) %>
  

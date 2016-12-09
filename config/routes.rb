@@ -3,13 +3,25 @@ Rails.application.routes.draw do
  
   devise_for :users, controllers: {registrations: "registrations" }
   
-   
+ 
   authenticated :user do
      root 'details#show', as: :authenticated_root
-     
- 
+     devise_scope :user do
+         get "users/picture" => "users"
+         get "users/password" => "users"
+       end
+   
+    resources :users do
+    collection do
+      get :picture
+      get :password
+    end
+  end
   end
 
+ 
+
+ 
  
  resources :visitors do
    collection do
