@@ -67,6 +67,7 @@ class User < ActiveRecord::Base
      def set_detail
        
        self.build_detail(:name => self.name) unless self.detail.present?
+       
        self.detail.save
      end   
    

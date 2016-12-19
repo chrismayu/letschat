@@ -72,13 +72,14 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_apikey
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :enable_starttls_auto => true,
+    :user_name => ENV["MANDRILL_USERNAME"],
+    :password  => ENV["MANDRILL_API_KEY"], # SMTP password is any valid API key
+    :authentication => 'login'
+    
+   
   }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }

@@ -1,6 +1,8 @@
 class CreateAdminService
   def call
     
+    
+    
     user = User.find_or_create_by!(email: Rails.application.secrets.admin_email) do |user|
         user.password = Rails.application.secrets.admin_password
         user.password_confirmation = Rails.application.secrets.admin_password
@@ -13,11 +15,17 @@ class CreateAdminService
         user.admin!
          
       end
+      puts "#{user.inspect}"
+      puts "#{user.email}"
       
-      detail = Detail.find_or_create_by!(user_id: user.id) do |detail|
-          detail.details_email = Rails.application.secrets.admin_email
-          detail.cellphone = Faker::PhoneNumber.phone_number
-        end
+      
+       detail = Detail.find(user.id )        
+       detail.cellphone = Faker::PhoneNumber.phone_number 
+       detail.details_email = Rails.application.secrets.admin_email  
+       detail.save!
+    
+      
+      
           puts "#{detail.inspect}"  
       
   end

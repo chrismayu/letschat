@@ -5,8 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-#admin = CreateAdminService.new.call
-#puts 'CREATED ADMIN USER: ' << admin.email
-# Environment variables (ENV['...']) can be set in the file .env file.
-#icon = CreateIcons.new.call
-#25.times { user = CreateDemoUser.new.call }
+
+
+admin = CreateAdminService.new.call
+
+icon = CreateIcons.new.call
+25.times { user = CreateDemoUser.new.call }
