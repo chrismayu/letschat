@@ -26,8 +26,12 @@ Rails.application.routes.draw do
  resources :visitors do
    collection do
      get :autocomplete
-   end
- end
+   end 
+ end 
+ match 'search', :as => :search, 
+                                :via => :get,
+                                :controller => :visitors, 
+                                :action => :search
  
   root to: 'visitors#index'
  
