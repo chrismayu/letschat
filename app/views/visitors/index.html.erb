@@ -34,16 +34,22 @@
 	</div>	
 	</div>
 		
-		<div class="col-md-6">
- 
-	 
-	 
+     <div class="col-md-6"> 
 	  <%= image_tag("phone.png", :class =>"img", :alt => "Laptop-email-received" ) %>
- 
-  
- 
- 
+     </div>
  
  </div>
  
+ 
+ <div class="row blue-bg">
+ 	<div class="col-md-12">
+   <div class="form-group main_text">
+   <p><strong>  Search Listings:</strong></p></div> 
+  <%= form_tag visitors_path, class:"navbar-form ", method: :get do %>
+       <%= text_field_tag :q,  nil, placeholder: "Name or Email", :class => 'form-control' %>
+   <% end %>
+   
+     </div>
+ 
  </div>
+ 
