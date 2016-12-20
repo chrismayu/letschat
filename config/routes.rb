@@ -36,7 +36,7 @@ Rails.application.routes.draw do
   resources :details   
  # get ':id' => 'details#outside_show' 
   
- 
+ match 'blank_form' => 'blank_form#signup', :via => :post
   
  match 'contact' => 'contact#new',  :via => :get
  match 'contact' => 'contact#create', :via => :post

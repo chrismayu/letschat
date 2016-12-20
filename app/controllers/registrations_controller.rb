@@ -1,5 +1,12 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  def new
+    @user = User.new(:email => params[:email])
+    puts @user.inspect
+    super
+  end  
+
+
   private
 
   def sign_up_params
