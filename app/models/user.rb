@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   acts_as_taggable
   
-  searchkick text_start: [:first_name, :last_name,:name, ], suggest: [:title], settings: {index: {max_result_window: 10000}}
+  searchkick text_start: [:first_name, :last_name,:name,:email ], suggest: [:title], settings: {index: {max_result_window: 10000}}
  
     def search_data
       {
@@ -44,7 +44,6 @@ class User < ActiveRecord::Base
 
 
   def self.front_page
-    
     user = User.all
   end
 
@@ -71,6 +70,7 @@ class User < ActiveRecord::Base
        self.detail.save
      end   
    
+ 
   
      protected
 

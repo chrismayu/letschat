@@ -1,6 +1,17 @@
 <%# add navigation links to this file %>
 <%#  <li class='nav-item'><%= link_to 'About', page_path('about'), class: 'nav-link' %> <%# </li> %>
 
+<% unless user_signed_in? %>
+<% unless current_page?(root_path)%>
 		  <%= form_tag search_path, class:"navbar-form navbar-right", method: :get do %>
 		       <%= text_field_tag :q,  nil, placeholder: "Search", :class => 'form-control' %>
 		   <% end %>
+<% end %>
+
+<% else %>
+		  <%= form_tag search_path, class:"navbar-form navbar-right", method: :get do %>
+		       <%= text_field_tag :q,  nil, placeholder: "Search", :class => 'form-control' %>
+		   <% end %>
+<% end %>
+
+		

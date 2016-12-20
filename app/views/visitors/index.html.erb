@@ -1,4 +1,4 @@
- <br><br>
+ <br> 
 <div class="row">
 	<div class="col-md-offset-1 col-md-5">
 		<div class="vertical">
@@ -40,16 +40,20 @@
  
  </div>
  
- 
+ <br>
  <div class="row blue-bg">
- 	<div class="col-md-12">
-   <div class="form-group main_text">
-   <p><strong>  Search Listings:</strong></p></div> 
-  <%= form_tag search_path, class:"navbar-form ", method: :get do %>
-       <%= text_field_tag :q,  nil, placeholder: "Name or Email", :class => 'form-control' %>
+	 	<div class="col-md-offset-1 col-md-3">
+	      <p  class="navbar-form  main_text search-bar-text pull-right "><strong>  Search Listings:</strong></p> 
+	    </div>
+		
+ <div class="col-md-8">
+   <div class="form-group main_text pull-left col-md-4">
+  
+  <%= form_tag search_path, class:"navbar-form search-bar col-md-4", method: :get do %>
+       <%= text_field_tag :q,  nil, placeholder: "Name or Email", :class => 'form-control col-md-4' %>
    <% end %>
-   
-     </div>
+    </div>   
+ </div>
  
  </div>
  
