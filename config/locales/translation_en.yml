@@ -1,0 +1,96 @@
+en:
+  activerecord:
+    models:
+      acts_as_taggable_on/tag: Acts as taggable on/tag  #g
+      acts_as_taggable_on/tagging: Acts as taggable on/tagging  #g
+      detail: Detail  #g
+      icon: Icon  #g
+      user: User  #g
+
+    attributes:
+      acts_as_taggable_on/tag:
+        name: Name  #g
+        taggings: Taggings  #g
+
+      acts_as_taggable_on/tagging:
+        context: Context  #g
+        tag: :activerecord.models.tag  #g
+        taggable: :activerecord.models.taggable  #g
+        taggable_type: Taggable type  #g
+        tagger: :activerecord.models.tagger  #g
+        tagger_type: Tagger type  #g
+
+      detail:
+        address: Address  #g
+        cellphone: Cellphone  #g
+        city: City  #g
+        country: Country  #g
+        details_email: Details email  #g
+        email_able: Email able  #g
+        icons: Icons  #g
+        name: Name  #g
+        phone2: Phone2  #g
+        province: Province  #g
+        slug: Slug  #g
+        social_link_1: Social link 1  #g
+        social_link_10: Social link 10  #g
+        social_link_10_icon: Social link 10 icon  #g
+        social_link_10_url: Social link 10 url  #g
+        social_link_1_icon: Social link 1 icon  #g
+        social_link_1_url: Social link 1 url  #g
+        social_link_2: Social link 2  #g
+        social_link_2_icon: Social link 2 icon  #g
+        social_link_2_url: Social link 2 url  #g
+        social_link_3: Social link 3  #g
+        social_link_3_icon: Social link 3 icon  #g
+        social_link_3_url: Social link 3 url  #g
+        social_link_4: Social link 4  #g
+        social_link_4_icon: Social link 4 icon  #g
+        social_link_4_url: Social link 4 url  #g
+        social_link_5: Social link 5  #g
+        social_link_5_icon: Social link 5 icon  #g
+        social_link_5_url: Social link 5 url  #g
+        social_link_6: Social link 6  #g
+        social_link_6_icon: Social link 6 icon  #g
+        social_link_6_url: Social link 6 url  #g
+        social_link_7: Social link 7  #g
+        social_link_7_icon: Social link 7 icon  #g
+        social_link_7_url: Social link 7 url  #g
+        social_link_8: Social link 8  #g
+        social_link_8_icon: Social link 8 icon  #g
+        social_link_8_url: Social link 8 url  #g
+        social_link_9: Social link 9  #g
+        social_link_9_icon: Social link 9 icon  #g
+        social_link_9_url: Social link 9 url  #g
+        user: :activerecord.models.user  #g
+
+      icon:
+        detail: :activerecord.models.detail  #g
+        icon_css: Icon css  #g
+        name: Name  #g
+        top_icons: Top icons  #g
+
+      user:
+        base_tags: Base tags  #g
+        current_sign_in_at: Current sign in at  #g
+        current_sign_in_ip: Current sign in ip  #g
+        demo_user: Demo user  #g
+        detail: :activerecord.models.detail  #g
+        display_name: Display name  #g
+        email: Email  #g
+        encrypted_password: Encrypted password  #g
+        first_name: First name  #g
+        keep_private: Keep private  #g
+        last_name: Last name  #g
+        last_sign_in_at: Last sign in at  #g
+        last_sign_in_ip: Last sign in ip  #g
+        name: Name  #g
+        remember_created_at: Remember created at  #g
+        reset_password_sent_at: Reset password sent at  #g
+        reset_password_token: Reset password token  #g
+        role: Role  #g
+        slug: Slug  #g
+        tag_taggings: Tag taggings  #g
+        taggings: Taggings  #g
+        tags: Tags  #g
+        yes_receive_email: Yes receive email  #g

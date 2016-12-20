@@ -31,7 +31,7 @@ gem 'heroku'
 gem 'bh'  
 gem 'twitter-bootstrap-rails', ' 3.2.0'
 gem 'bootstrap-datepicker-rails'
-gem 'rollbar', '~> 2.8.3' 
+gem 'rollbar' 
 gem "pundit"
 gem 'redcarpet'
 gem 'exception_handler', '~> 0.5.0'
