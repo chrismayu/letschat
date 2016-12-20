@@ -18,11 +18,40 @@
  
 .body{
 	 
-	margin-top:50px;
+	margin-top:10px;
 } 
+
+main{
+  @extend .container-fluid;
+
+// background-color: #fff;
+  padding-top: -40px;
+ // width: 100%;
+  //margin-top: 51px; // accommodate the navbar
+  }
 
 .fa-select {
     font-family: sans-serif, 'FontAwesome';
+}
+
+.main_text{
+	color: #fff;
+	font-size: 25px; 
+}
+
+.main_text_middle{
+	color: #fff;
+	font-size: 16px; 
+}
+.vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+.main_text_small{
+	color: #fff;
+	font-size: 12px; 
 }
 
 .block-semi-tansparent {
@@ -37,6 +66,24 @@
 	 
 }
 
+.block-black-semi-tansparent {
+	background-color:rgba(0,0,0,0.7);
+    //height:350px;
+  	padding-left:20px;
+	padding-right:20px;
+	padding-top:1px;
+	padding-bottom:2px;
+	margin:20px;
+ 
+	 
+}
+
+#wraps{
+	background-color:rgba(0,0,0,0.7);	 
+}
+
+
+
 
 body{ 
 	background: asset_url('background_hp.jpg')  no-repeat center center fixed;
@@ -48,6 +95,7 @@ body{
 	
 }
 
+ 
 
 
 .stepwizard-step p {
@@ -445,13 +493,7 @@ img {
 }
 
 
-main {
-  @extend .container;
-// background-color: #fff;
-  padding-top: -80px;
- // width: 100%;
-  //margin-top: 51px; // accommodate the navbar
-  }
+
 section {
   @extend .row;
   margin-top: 20px;

@@ -1,7 +1,9 @@
 class VisitorsController < ApplicationController
+  layout "application_index", only: [:index]
   
   def index
     
+    @blank_form = BlankForm.new
     @users = User.front_page
     
      query = params[:q].presence || "*"

@@ -1,0 +1,40 @@
+ 
+<div class="row block-semi-tansparent">
+	<div class="col-sm-12">
+ <div class="row">
+ <% @users.each.with_index  do |user, index| %> 
+ 
+   <% if((index ) % 4 == 0)%>
+    </div>
+	 <div class="row"> 
+ <% end %>
+ <%= link_to outside_show_path(id: user.name)  do %>
+ <div class="col-sm-2 block-semi-tansparent"> <!-- Where the picture and title goes -->
+	
+ <div class="image_show">	
+	 
+ 	 <% if user.profile_image_id? %>
+ 	<%= image_tag attachment_url(user, :profile_image, :fill, 200, 200, format: "jpg") %>
+  <%else%>
+ 	<i class="fa fa-user-o" aria-hidden="true"></i>
+ 
+ 	<%end%>
+ 
+     <h3><%= user.first_name %> <%= user.last_name %></h3>
+ </div> 
+ 
+ </div>
+  
+   <% end %>
+ 
+
+ 
+ 
+   
+ 
+ <% end %>
+   </div>
+ 
+ 
+ 
+ </div>
